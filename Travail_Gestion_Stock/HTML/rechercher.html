@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="../CSS/Main.css"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <meta charset="utf-8" />
+        <meta name="author" content="Alexandra Sirois">
+		<meta http-equiv="refresh" content="60">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rechercher</title>
+    </head>
+        
+
+    <body>
+        <div class="conteneur_principal">
+            <div class="conteneur_menu">
+                <p id="menu_ajouter" class="option_menu">Ajouter un produit</p>
+                <p id="menu_modifier" class="option_menu">Modifier un produit</p>
+                <p id="menu_supprimer" class="option_menu">Supprimer un produit</p>
+                <p id="menu_afficher" class="option_menu">Afficher la liste des produits</p>
+                <p id="menu_recherche" class="option_menu">Recherche d'un produit</p>
+            </div>
+
+            <div class="conteneur_ajout">
+                <p class="paragraphe_titre">Rechercher un produit</p>
+            </div>
+        </div>
+   
+    </body>
+
+    <script>
+
+        $("#menu_recherche").css("color","white");
+        $("#menu_recherche").css("border-bottom","1px solid white");
+
+
+        //Animation du menu
+        $("#menu_ajouter").on("mouseover", function() {menuMouseOver("#menu_ajouter")});
+        $("#menu_ajouter").on("mouseout", function() {menuMouseOut("#menu_ajouter")});
+
+        $("#menu_modifier").on("mouseover", function() {menuMouseOver("#menu_modifier")});
+        $("#menu_modifier").on("mouseout", function() {menuMouseOut("#menu_modifier")});
+
+        $("#menu_supprimer").on("mouseover", function() {menuMouseOver("#menu_supprimer")});
+        $("#menu_supprimer").on("mouseout", function() {menuMouseOut("#menu_supprimer")});
+
+        $("#menu_afficher").on("mouseover", function() {menuMouseOver("#menu_afficher")});
+        $("#menu_afficher").on("mouseout", function() {menuMouseOut("#menu_afficher")});
+
+        function menuMouseOver(elementId){
+            $(elementId).css("color","white");
+            $(elementId).animate({fontSize: '2em'}, "fast");
+            $(elementId).css("border-bottom","1px solid white");
+        }
+
+        function menuMouseOut(elementId){
+            $(elementId).css("color","black");
+            $(elementId).animate({fontSize: '20px'}, "fast");
+            $(elementId).css("border-bottom","1px solid black");
+        }
+
+
+        //changer de page html
+        $("#menu_ajouter").click(function() {location.replace("Main.html");});
+        $("#menu_modifier").click(function() {location.replace("modifier.html");});
+        $("#menu_supprimer").click(function() {location.replace("supprimer.html");});
+        $("#menu_afficher").click(function() {location.replace("afficher.html");});
+        $("#menu_recherche").click(function() {location.replace("rechercher.html");});
+
+    </script>
+
+   
+
+
+</html>

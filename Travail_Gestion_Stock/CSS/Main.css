@@ -1,0 +1,55 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url("../FONT/dazz-place-display-font/DazzPlaceDemoDisplay-1G9gg.ttf");
+  }
+
+  body {
+    font-family: myFirstFont;
+  }
+
+.conteneur_principal{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    background-image: url("../IMAGES/background_5.jpg");
+    background-size: cover;
+}
+
+.conteneur_menu{
+    display: flex;
+    justify-content: center;
+}
+
+.option_menu{
+    border-bottom: 1px solid black;
+    margin: 30px;
+    color: black;
+    font-size: 20px;
+}
+
+
+.conteneur_ajout{
+    margin: 20px;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+}
+
+.paragraphe_titre{
+font-size: 70px;
+border-bottom: 2px solid black;
+}
+
+.formulaire{
+    font-size: 40px; 
+    margin: 50px;
+}
+
+.sous-titre{
+    border-bottom: 1px solid black;
+}
+
+.input{
+    font-family: myFirstFont;
+    font-size: 30px;
+}
